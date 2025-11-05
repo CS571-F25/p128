@@ -2,14 +2,18 @@ import { HashRouter, Route, Routes } from 'react-router'
 import './App.css'
 import Home from './components/Home'
 import Guides from './components/Guides'
+import BaitboxLayout from './components/BaitboxLayout'
 
 function App() {
-  return <HashRouter>
+  return (<HashRouter>
     <Routes>
-      <Route path = "/" element={<Home></Home>}></Route>
-      <Route path = "/guides" element={<Guides></Guides>}></Route>
+      <Route path = "/" element={<BaitboxLayout/>}>
+            <Route index element={<Home />} />
+            <Route path = "/guides" element={<Guides/>}></Route>
+      </Route>
+
     </Routes>
-  </HashRouter>
+  </HashRouter>)
 }
 
 export default App
