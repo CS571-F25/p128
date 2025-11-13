@@ -1,6 +1,6 @@
 export default function Home (props){
     return <div>
         <h1>Fishing site</h1>
-        <img style={{width:500}} src="/p128/fish.JPEG" alt="An image of fish"></img>
+        <p>Badger Baitbox will be an informational web project that relates to Wisconsin freshwater fishing. It will be designed for beginners who don't understand much about freshwater fishing, or those who would like an easy way to review core ideas/tips of fishing. It will include guides on lures, rods, and fish behavior(best seasons, common WI fish). Users can also find information relating to licenses and legal fishing times and regulations, like daily limits. Users can register with an account locally to upload and share images, being filtered by date, size, weight, and other features. The site will also feature a mock tournament signup section and a bookmark bar for each section that the user may be interested in saving. To go into tech specifics, The home page will have sections: Home, Guides, Licenses & Rules, Bookmarks, and Progress Tracker, and a Mock tournament signup. I may also add some sign up information that uses cookies like we have just learned about in lecture to confirm validation. I would use React Router to implement the different pages and use localstorage for any bookmarks, progress, and possibly tournament entries if I am unable to make a simple backend. The interactive parts will be bookmarks, progress tracker, an image gallery with filters, and a mock signup</p>
     </div>
 }

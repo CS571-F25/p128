@@ -1,8 +1,13 @@
 import { HashRouter, Route, Routes } from 'react-router'
 import './App.css'
+
 import Home from './components/Home'
 import Guides from './components/Guides'
 import BaitboxLayout from './components/BaitboxLayout'
+import LiscencesAndRules from './components/LiscencesAndRules'
+import Bookmarks from './components/Bookmarks'
+import ProgressTracker from './components/ProgressTracker'
+import Tournaments from './components/Tournaments'
 
 function App() {
   return (<HashRouter>
@@ -10,6 +15,10 @@ function App() {
       <Route path = "/" element={<BaitboxLayout/>}>
             <Route index element={<Home />} />
             <Route path = "/guides" element={<Guides/>}></Route>
+            <Route path = "/LiscencesAndRules" element={<LiscencesAndRules/>}></Route>
+            <Route path = "/Bookmarks" element={<Bookmarks/>}></Route>
+            <Route path = "/ProgressTracker" element={<ProgressTracker/>}></Route>
+            <Route path = "/Tournaments" element={<Tournaments/>}></Route>
       </Route>
 
     </Routes>
