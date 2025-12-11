@@ -147,7 +147,7 @@ export default function ProgressTracker() {
             <Row className="mb-4">
                 <Col md={4} className="mb-3">
                     <Card>
-                        <Card.Img variant="top" src="fish.JPEG" alt="Angler holding a brown trout in Wisconsin"/>
+                        <Card.Img variant="top" src="ProgressWalleye.png" alt="Angler holding a brown trout in Wisconsin"/>
                     </Card>
                 </Col>
                 <Col md={8}>
