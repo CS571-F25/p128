@@ -46,7 +46,7 @@ const Events = [
 ];
 const registrationKey = "bb-tournament-reg"
 
-export default function Tournaments(props) {
+export default function Tournaments() {
   const [currentUser, setCurrentUser] = useState("");
   const [registrations, setRegistrations] = useState({});
   const navigate = useNavigate();
@@ -137,7 +137,7 @@ export default function Tournaments(props) {
                 <Card.Body>
                   <Card.Title>{ev.name}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    {ev.lake} --- {ev.date} --- {ev.style}
+                    {ev.lake} • {ev.date} • {ev.style}
                   </Card.Subtitle>
                   <Card.Text>{ev.description}</Card.Text>
                   {regCount > 0 && (
@@ -146,7 +146,7 @@ export default function Tournaments(props) {
                     </Card.Text>
                   )}
 
-                  {/* Register / Remove buttons */}
+                  {/* Register or Remove buttons */}
                   {registered ? (
                     <Button
                       variant="danger"
@@ -190,7 +190,7 @@ export default function Tournaments(props) {
                     <strong>{ev.name}</strong>
                     <br />
                     <span style={{ fontSize: "0.9rem" }}>
-                      {ev.lake} - {ev.date}
+                      {ev.lake} • {ev.date}
                     </span>
                   </li>
                 );

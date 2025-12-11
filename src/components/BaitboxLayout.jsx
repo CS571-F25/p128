@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Container, Nav, Navbar} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, Outlet } from "react-router";
 
+// Navigation bar on the top of the page that maps each section to a route
 function BaitboxLayout() {
     return (
         <div>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 
 const BookmarksContext = createContext(null);
@@ -7,32 +7,29 @@ const storageKey = "bookmarks";
 export default function BookmarksProvider({ children }) {
     const [bookmarks, setBookmarks] = useState([]);
 
+    // Sets and gets info from localStorage about bookmarks info
     useEffect(() => {
-        const saved = localStorage.getItem(storageKey);
+      const saved = localStorage.getItem(storageKey);
         if (saved) {
-            setBookmarks(JSON.parse(saved));
+          setBookmarks(JSON.parse(saved));
         }
     }, []);
 
     useEffect(() => {
-        localStorage.setItem(storageKey, JSON.stringify(bookmarks));
+      localStorage.setItem(storageKey, JSON.stringify(bookmarks));
     }, [bookmarks]);
 
     function toggleBookmark(item) {
-    setBookmarks(prev => {
-      const exists = prev.find(b => b.id === item.id);
-      if (exists) {
-        return prev.filter(b => b.id !== item.id);
-      }
-      return [...prev, item];
+      setBookmarks(prev => {
+        const exists = prev.find(b => b.id === item.id);
+        if (exists) {
+          return prev.filter(b => b.id !== item.id);
+        }
+        return [...prev, item];
     });
   }
 
-   function clearBookmarks() {
-    setBookmarks([]);
-  }
-
-    const value = { bookmarks, toggleBookmark, clearBookmarks };
+    const value = { bookmarks, toggleBookmark };
   return (
     <BookmarksContext.Provider value={value}>
       {children}
@@ -54,12 +51,7 @@ export function BookmarkButton({ id, label, to, variant = "outline-secondary", s
   const isSaved = bookmarks.some(b => b.id === id);
 
   return (
-    <Button
-      variant={isSaved ? "warning" : variant}
-      size={size}
-      className={className}
-      onClick={() => toggleBookmark({ id, label, to })}
-    >
+    <Button variant={isSaved ? "warning" : variant} size={size} className={className} onClick={() => toggleBookmark({ id, label, to })}>
       {isSaved ? "Bookmarked" : "Bookmark"}
     </Button>
   );

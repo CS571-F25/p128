@@ -21,11 +21,13 @@ export default function GuideDetail() {
       Back
       </Button>
 
+      {/* header */}
       <div style={{ textAlign: "center", marginTop: "0.5rem", marginBottom: "1rem" }}>
         <h1 id={bookmarkId} style={{ marginBottom: "0.25rem" }}>
           {guide.title}
         </h1>
 
+        {/* bookmark button */}
         <div style={{ display: "flex", justifyContent: "center", marginTop: "0.25rem" }}>
           <BookmarkButton id={bookmarkId} label="Save this guide" to={`/Guides/${guide.id}#${bookmarkId}`} size="sm" className="rules-bookmark" />
         </div>
@@ -33,6 +35,7 @@ export default function GuideDetail() {
 
       <img src={guide.image} style={{width: 700, borderRadius: "12px", marginTop: "1rem"}} alt={guide.title}></img>
 
+      {/* maps each section within guidesData.js into a section header and paragraph */}
       {guide.sections.map((section, index) => (
         <section key={index} className="guide-section" style={{ textAlign: "left", marginTop: "1.5rem" }}>
           <h2>{section}</h2>

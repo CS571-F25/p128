@@ -5,7 +5,7 @@ import { useBookmarks } from "./BookmarksContext";
 export default function Bookmarks() {
   const { bookmarks } = useBookmarks();
 
-  //maps bookmarks to cards
+  // Maps bookmarks to cards
   const items = bookmarks.map(b => {
     let type = "Other";
     if (b.id?.startsWith("rules-")) type = "Licenses & Rules";
@@ -31,6 +31,7 @@ export default function Bookmarks() {
             a bookmark to jump back to that guide or rules section.
           </p>
 
+          {/* Maps all bookmarks taken from localStorage into cards that when clicked directly send user to their bookmark section */}
           {items.map(b => (
             <Card key={b.id} className="mb-3">
               <Card.Body>

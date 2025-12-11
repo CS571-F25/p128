@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Card, Form, Button } from "react-bootstrap";
 
+// Keys used for localStorage access
   const accountsKey = "bb-accounts"
   const currentUserKey = "bb-user"
   
@@ -9,6 +10,7 @@ export default function Account() {
   const [usernameInput, setUsernameInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
 
+  // Sets and gets items from localStorage
   useEffect(() => {
     const savedUser = localStorage.getItem(currentUserKey);
     if (savedUser) {
@@ -26,6 +28,7 @@ export default function Account() {
     localStorage.setItem(accountsKey, JSON.stringify(accounts))
   }
 
+  // Handles user info checking if user has account and if not, asks user if they want to make one
   function handleAuth(e) {
     e.preventDefault();
     
@@ -55,7 +58,7 @@ export default function Account() {
       localStorage.setItem(currentUserKey, username)
       alert("Logged in successfully");
     } else {
-      const shouldCreate = window.confirm("No account with that username exists, Createa a new account with this information?")
+      const shouldCreate = window.confirm("No account with that username exists, Create a new account with this information?")
       if (!shouldCreate) {
         return;
       }
@@ -71,6 +74,7 @@ export default function Account() {
     setPasswordInput("");
     return;
   } 
+
   function handleLogout() {
     setCurrentUser("");
     localStorage.removeItem(currentUserKey);
@@ -82,11 +86,7 @@ export default function Account() {
       <h1>Badger Bait Account</h1>
 
       <Card style={{ maxWidth: 480 }}>
-        <Card.Img
-        variant="top"
-        src="Musky.png"
-        alt="Someone holding a Musky"
-        />
+        <Card.Img variant="top" src="Musky.png" alt="Someone holding a Musky"/>
         <Card.Body>
           {currentUser ? (
             <>

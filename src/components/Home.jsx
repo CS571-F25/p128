@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 import './Home.css';  
 
-export default function Home (props){
+export default function Home (){
     return <div className="home-root">
         <Container>
             <Row xs={1} md={2} lg={3} className="home-hero-row">
@@ -24,7 +24,7 @@ export default function Home (props){
 
                 </Col>
                 <Col>
-                <Card className="home-hero-image-card"><img src="HomeBass.png"></img></Card>
+                <Card className="home-hero-image-card"><img src="HomeBass.png" alt="Largemouth bass jumping out of water"></img></Card>
                 </Col>
             </Row>
         </Container>

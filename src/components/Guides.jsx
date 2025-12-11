@@ -4,12 +4,13 @@ import { Link } from "react-router";
 import { guides } from "./guidesData";
 import './Guides.css';  
 
-export default function Guides(props) {
+export default function Guides() {
     return (
         <div>
             <h1>Guides</h1>
             <Container>
                 <Row xs={1} md={2} lg={3} className="g-4">
+                    {/* Single row and cols that map to cards containing GuidesDetail.jsx file per guide */}
                     {guides.map(guide => (
                         <Col key ={guide.id}>
                             <Card className="guide-card" style={{ backgroundImage: `url("${guide.image}")`}}>

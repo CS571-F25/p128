@@ -65,7 +65,7 @@ const Steps = [
     }
 ];
 
-export default function ProgressTracker(props) {
+export default function ProgressTracker() {
     const [currentUser, setCurrentUser] = useState("");
     const [completedSteps, setCompletedSteps] = useState({});
     const [quizAnswers, setQuizAnswers] = useState({});
@@ -86,7 +86,7 @@ export default function ProgressTracker(props) {
         setCompletedSteps(loadedCompleted);
         setQuizAnswers(parsed.quizAnswers || {});
 
-        // if hasShownCongrats was saved, use it otherwise if all steps comlete assume it was shown already
+        // if hasShownCongrats was saved, use it otherwise if all steps assume it was shown already
         const allDone = Steps.every(step => loadedCompleted[step.id]);
         setHasShownCongrats( typeof parsed.hasShownCongrats === "boolean" ? parsed.hasShownCongrats : allDone)
     }, []);
