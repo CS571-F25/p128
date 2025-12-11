@@ -1,8 +1,8 @@
 import { Card, Button, Row, Container, Col } from 'react-bootstrap'
 import { Link } from "react-router";
 
-import { guides } from "./Guides/guidesData";
-import './Guides/Guides.css';  
+import { guides } from "./guidesData";
+import './Guides.css';  
 
 export default function Guides(props) {
     return (
@@ -23,7 +23,6 @@ export default function Guides(props) {
                         </Col>
                     ))}
                 </Row>
-                <p>Will add more guides later</p>
             </Container>
         </div>
     );

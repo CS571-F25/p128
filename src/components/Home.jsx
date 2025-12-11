@@ -60,6 +60,5 @@ export default function Home (props){
                     different fish.</p>
             </Container>
         </div>
-
     </div>
 }

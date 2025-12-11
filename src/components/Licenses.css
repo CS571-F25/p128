@@ -1,0 +1,140 @@
+/* ===== Licenses & Rules page layout ===== */
+/* License type rows with side images */
+
+.rules-hero {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rules-hero-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rules-hero-text h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.rules-hero-text p {
+  margin: 0;
+}
+.rules-license-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.rules-section-heading {
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+
+.rules-section-heading .rules-bookmark.btn {
+  margin-left: auto;
+}
+
+.rules-license-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.rules-license-text {
+  flex: 1;
+}
+
+.rules-list {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.rules-image-side {
+  max-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rules-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.rules-page h3 {
+  font-size: 1.35rem;
+  margin-top: 1.2rem;
+}
+
+.rules-page p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.rules-section {
+  margin-top: 2rem;
+}
+
+.rules-bookmark.btn {
+  position: relative;
+  padding: 4px 12px 4px 22px;
+  border-radius: 999px;
+  background-color: #f7f7fa;
+  border-color: #d4d4e0;
+  color: #555;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rules-bookmark.btn::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: #f2a64b;
+}
+
+.rules-bookmark.btn:hover {
+  background-color: #ffffff;
+  border-color: #c0c0d0;
+  color: #333;
+}
+
+.rules-bookmark.btn:active,
+.rules-bookmark.btn:focus,
+.rules-bookmark.btn:focus-visible {
+  background-color: #ffe8c2;
+  border-color: #f2a64b;
+  color: #6b3a00;
+  box-shadow: none;
+}
+
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.rules-table th,
+.rules-table td {
+  border: 1px solid #dddddd;
+  padding: 0.4rem 0.6rem;
+}
+
+.rules-table th {
+  background-color: #1D5B87;
+  text-align: left;
+  color: #F5F7FA;
+}
+
+.rules-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}

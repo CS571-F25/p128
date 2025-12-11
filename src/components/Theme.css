@@ -32,3 +32,11 @@ body {
   border-color: var(--bb-orange);
   color: #fff;
 }
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+  opacity: 1;
+}

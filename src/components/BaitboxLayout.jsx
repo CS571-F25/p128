@@ -17,12 +17,13 @@ function BaitboxLayout() {
                         <Nav.Link as={Link} to="Bookmarks">Bookmarks</Nav.Link>
                         <Nav.Link as={Link} to="ProgressTracker">Progress tracker</Nav.Link>
                         <Nav.Link as={Link} to="Tournaments">Tournaments</Nav.Link>
+                        <Nav.Link as={Link} to="Account">Account</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
             <div 
                 style={{
-                    addingTop: "80px",
+                    paddingTop: "80px",
                     paddingInline: "1rem"
                 }}>
                 <Outlet/>
